@@ -13,8 +13,8 @@ let tilesArray = [
                     {'id':'six', 'image':'url("src/UI/images/lambo.JPG")', 'class':'3'},
                     {'id':'seven', 'image':'url("src/UI/images/plane.JPG")', 'class':'4'},
                     {'id':'eight', 'image':'url("src/UI/images/plane.JPG")', 'class':'4'},
-                    {'id':'nine', 'image':'url("src/UI/images/beach.JPG")', 'class':'5'},
-                    {'id':'ten', 'image':'url("src/UI/images/beach.JPG")', 'class':'5'},
+                    {'id':'nine', 'image':'url("src/UI/images/ball.JPG")', 'class':'5'},
+                    {'id':'ten', 'image':'url("src/UI/images/ball.JPG")', 'class':'5'},
                     {'id':'eleven', 'image':'url("src/UI/images/ferrari.JPG")', 'class':'6'},
                     {'id':'twelve', 'image':'url("src/UI/images/ferrari.JPG")', 'class':'6'}
                   ];
