@@ -31,19 +31,27 @@ const evaluate = (currentStack, selectedTile) => {
             selectedTile.style.backgroundImage = '';
             topTile.style.backgroundImage = '';
 
-            // Set the backgroundColor and box-shadow as red
+            // Set the backgroundColor and box-shadow as red and shake it!
             selectedTile.style.backgroundColor = 'red';
             topTile.style.backgroundColor = 'red';
             selectedTile.style.boxShadow = 'red 0px 22px 70px 4px';
             topTile.style.boxShadow = 'red 0px 22px 70px 4px';
+
+            selectedTile.classList.add('shake');
+            topTile.classList.add('shake');
 
             // After the 1s, change the backgroundColor to blue and remove shadow
 
             setTimeout(()=>{
               selectedTile.style.backgroundColor = '#67cdfc';
               topTile.style.backgroundColor = '#67cdfc';
+
               selectedTile.style.boxShadow = '#005780 0px 22px 70px 4px';
-            topTile.style.boxShadow = '#005780 0px 22px 70px 4px';
+              topTile.style.boxShadow = '#005780 0px 22px 70px 4px';
+
+              selectedTile.classList.remove('shake');
+              topTile.classList.remove('shake');
+
             }, 1000);
           },500);
 
