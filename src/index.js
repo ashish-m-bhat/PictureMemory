@@ -2,8 +2,9 @@ import checkIfWon from "./modules/checkIfWon.js";
 import createDivs from "./modules/createDivs.js";
 import evaluate from "./modules/evaluate.js";
 import showClickedTile from "./modules/showClickedTile.js";
+import shuffleTilesArray from "./modules/shuffleTilesArray.js";
 
-const tilesArray = [
+let tilesArray = [
                     {'id':'one', 'image':'url("src/UI/images/dog.JPG")', 'class':'1'},
                     {'id':'two', 'image':'url("src/UI/images/dog.JPG")', 'class':'1'},
                     {'id':'three', 'image':'url("src/UI/images/cat.JPG")', 'class':'2'},
@@ -18,7 +19,9 @@ const tilesArray = [
                     {'id':'twelve', 'image':'url("src/UI/images/ferrari.JPG")', 'class':'6'}
                   ];
 
+tilesArray = shuffleTilesArray(tilesArray);
 createDivs(tilesArray);
+
 document.querySelector('#wrapperDiv').addEventListener('click', startGame);
 const countOfTriesLabel = document.querySelector('#countOfTriesLabel');
 const currentStack = [];
