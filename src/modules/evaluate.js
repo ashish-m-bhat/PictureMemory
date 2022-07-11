@@ -3,10 +3,9 @@ const evaluate = (currentStack, selectedTile) => {
     const selectedTileId = selectedTile.id;
     const selectedTileClassName = selectedTile.getAttribute('class');
 
-      // Check if there's a matching pair
+  // Check if there's a matching pair
   if(currentStack.length %2 ===0){
     currentStack.push(selectedTile);
-    selectedTile.style.backgroundColor = 'yellow';
   }
   else{
     // check
@@ -19,20 +18,35 @@ const evaluate = (currentStack, selectedTile) => {
       // If classNames match, it's a match!
       if(topClassName === selectedTileClassName){
         currentStack.push(topTile, selectedTile);
-        selectedTile.style.backgroundColor = 'green';
-        topTile.style.backgroundColor = 'green';
         selectedTile.style.boxShadow ='green 0px 22px 70px 4px';
         topTile.style.boxShadow ='green 0px 22px 70px 4px';
       }
+      // Wrong match
       else{
-        selectedTile.style.backgroundColor = 'red';
-        topTile.style.backgroundColor = 'red';
-        setTimeout(()=>{
-          selectedTile.textContent="";
-          topTile.textContent="";
-          selectedTile.style.backgroundColor = '#67cdfc';
-          topTile.style.backgroundColor = '#67cdfc';
-        }, 1000);
+          // Put this in a setTimeout, else the 2nd wrongly chosen tile will not show the image, sice the removal of image & setting of red background takes place immedietly
+          setTimeout(()=>{
+
+            //  After 500ms:
+            // remove the backgroundImage
+            selectedTile.style.backgroundImage = '';
+            topTile.style.backgroundImage = '';
+
+            // Set the backgroundColor and box-shadow as red
+            selectedTile.style.backgroundColor = 'red';
+            topTile.style.backgroundColor = 'red';
+            selectedTile.style.boxShadow = 'red 0px 22px 70px 4px';
+            topTile.style.boxShadow = 'red 0px 22px 70px 4px';
+
+            // After the 1s, change the backgroundColor to blue and remove shadow
+
+            setTimeout(()=>{
+              selectedTile.style.backgroundColor = '#67cdfc';
+              topTile.style.backgroundColor = '#67cdfc';
+              selectedTile.style.boxShadow = '#005780 0px 22px 70px 4px';
+            topTile.style.boxShadow = '#005780 0px 22px 70px 4px';
+            }, 1000);
+          },500);
+
 
       }
     }
