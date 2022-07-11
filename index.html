@@ -5,38 +5,31 @@
 	<title>Parcel Sandbox</title>
 	<meta charset="UTF-8" />
 	<style>
-		#wrapper{
+		#wrapperDiv{
 			border:1px solid blue;
-			width: 100vw;
-			height:90vh;
+			width: 99vw;
+			height:93vh;
 			background-color: rgb(37, 44, 42);
 			display: flex;
-			justify-content: space-around;
 			flex-flow: row wrap;
+			justify-content: space-around;
+			align-items: space-around;
 		}
 		div > div{
-			background-color: #67cdfc;
-			height: 20%;
-			width:23vw;
-			margin:10vh;
-			cursor: pointer;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: silver;
+			font-size:x-large;
 		}
 	</style>
 </head>
 
 <body>
 	<div id="app"></div>
-		<button id="start">start</button>
-		<label> Score: <label> <span id="result">0</span>
-	<div id="wrapper">
-		<div id="one" class="1"></div>
-		<div id="two" class="2"></div>
-		<div id="three" class="3"></div>
-		<div id="four" class="1"></div>
-		<div id="five" class="2"></div>
-		<div id="six" class="3"></div>
-	</div>
-	<script src="src/index.js"></script>
+		<label> Count: <label> <span id="countOfTriesLabel">0</span>
+	<div id="wrapperDiv"></div>
+	<script src="src/index.js" type="module"></script>
 </body>
 
 </html>
