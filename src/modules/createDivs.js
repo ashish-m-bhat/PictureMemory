@@ -11,7 +11,7 @@ const createDivs = tilesArray =>{
                         margin:6vw;
                         margin-top:2vh;
                         margin-bottom:2vh;
-                        cursor:pointer;
+                        opacity:0.2;
                         box-shadow: #005780 0px 22px 70px 4px;
                         border-radius:10%`;
       wrapperDiv.append(innerDiv);
