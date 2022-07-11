@@ -6,9 +6,30 @@ body{
     background-image: linear-gradient(to bottom right, black, rgb(184, 44, 44), black);
 }
 
+.NavBar{
+    display: flex;
+}
+
+#resetGameButton{
+    margin: 1vw;
+    margin-top: 0.7vw;
+    cursor: pointer;
+    background-color: #67cdfc;
+    color:gray;
+    padding: 0.5vw;
+    border: 1px solid gray;
+}
+
+#resetGameButton:hover{
+    background-image: linear-gradient(to bottom right, yellow, red, yellow);
+    color: white;
+
+}
+
 .counterPlaceholder{
     color: white;
     font-size: x-large;
+    margin: 1vw;
 }
 
 #wrapperDiv{

@@ -1,6 +1,7 @@
 import checkIfWon from "./modules/checkIfWon.js";
 import createDivs from "./modules/createDivs.js";
 import evaluate from "./modules/evaluate.js";
+import resetGame from "./modules/resetGame.js";
 import showClickedTile from "./modules/showClickedTile.js";
 import shuffleTilesArray from "./modules/shuffleTilesArray.js";
 
@@ -23,6 +24,8 @@ tilesArray = shuffleTilesArray(tilesArray);
 createDivs(tilesArray);
 
 document.querySelector('#wrapperDiv').addEventListener('click', startGame);
+document.querySelector('#resetGameButton').addEventListener('click', resetGame);
+
 const countOfTriesLabel = document.querySelector('#countOfTriesLabel');
 const currentStack = [];
 let countOfTries=0;
