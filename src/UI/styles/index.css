@@ -35,7 +35,7 @@ div > button:hover{
 #wrapperDiv{
     margin-top:2%;
     margin-bottom: 3%;
-    width:80vw;
+    width:60vw;
     height:80vh;
     background-color: rgb(37, 44, 42,0.8);
     display: flex;

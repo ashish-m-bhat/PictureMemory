@@ -14,7 +14,10 @@ import { countOfTriesLabel, currentStack } from "./variables.js";
     document.querySelector('#startGameButton').hidden = 'true';
 
     // Illuminate the tiles and change the cursor type to pointer
-    [...document.body.querySelector('#wrapperDiv').children].forEach(eachTile => eachTile.classList.add('gameOn'));
+    [...document.body.querySelector('#wrapperDiv').children].forEach(eachTile => {
+            eachTile.style.cursor = 'pointer';
+            eachTile.style.opacity = '1';
+    });
 
     // start listening to clicks
     document.querySelector('#wrapperDiv').addEventListener('click', event =>{

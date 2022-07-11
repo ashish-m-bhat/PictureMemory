@@ -6,12 +6,11 @@ const createDivs = tilesArray =>{
       innerDiv.setAttribute('class', tilesArray[i-1].class);
       innerDiv.style.cssText=`
                         background-color:#67cdfc;
-                        height:25%;
-                        width:10%;
-                        margin:6vw;
+                        height:27%;
+                        width:16%;
                         margin-top:2vh;
-                        margin-bottom:2vh;
-                        opacity:0.2;
+                        margin-right:3vw;
+                        opacity:0.1;
                         box-shadow: #005780 0px 22px 70px 4px;
                         border-radius:10%`;
       wrapperDiv.append(innerDiv);

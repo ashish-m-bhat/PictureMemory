@@ -23,7 +23,7 @@ const evaluate = (currentStack, selectedTile) => {
       }
       // Wrong match
       else{
-          // Put this in a setTimeout, else the 2nd wrongly chosen tile will not show the image, sice the removal of image & setting of red background takes place immedietly
+          // Put this in a setTimeout, else the 2nd wrongly chosen tile will not show the image, since the removal of image & setting of red background takes place immedietly
           setTimeout(()=>{
 
             //  After 500ms:
@@ -52,8 +52,8 @@ const evaluate = (currentStack, selectedTile) => {
               selectedTile.classList.remove('shake');
               topTile.classList.remove('shake');
 
-            }, 1000);
-          },500);
+            }, 500);
+          },1000);
 
 
       }
