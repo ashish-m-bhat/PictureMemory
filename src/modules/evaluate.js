@@ -23,36 +23,40 @@ const evaluate = (currentStack, selectedTile) => {
       }
       // Wrong match
       else{
+        // Helper array
+        const pairsArray = [selectedTile, topTile];
+
           // Put this in a setTimeout, else the 2nd wrongly chosen tile will not show the image, since the removal of image & setting of red background takes place immedietly
           setTimeout(()=>{
+            // After 500ms
 
-            //  After 500ms:
+            pairsArray.forEach(eachTile => {
+
             // remove the backgroundImage
-            selectedTile.style.backgroundImage = '';
-            topTile.style.backgroundImage = '';
+            eachTile.style.backgroundImage = '';
+
+            // Reset the transtion and transfrom. Skipping this will lead animation not showing up the 2nd time onwards a tile has been clicked
+            eachTile.style.transition = 'all 0s ease 0s';
+            eachTile.style.transform = 'none';
 
             // Set the backgroundColor and box-shadow as red and shake it!
-            selectedTile.style.backgroundColor = 'red';
-            topTile.style.backgroundColor = 'red';
-            selectedTile.style.boxShadow = 'red 0px 22px 70px 4px';
-            topTile.style.boxShadow = 'red 0px 22px 70px 4px';
+            eachTile.style.backgroundColor = 'red';
+            eachTile.style.boxShadow = 'red 0px 22px 70px 4px';
 
-            selectedTile.classList.add('shake');
-            topTile.classList.add('shake');
+            eachTile.classList.add('shake');
+            })
+
 
             // After the 1s, change the backgroundColor to blue and remove shadow
 
             setTimeout(()=>{
-              selectedTile.style.backgroundColor = '#67cdfc';
-              topTile.style.backgroundColor = '#67cdfc';
-
-              selectedTile.style.boxShadow = '#005780 0px 22px 70px 4px';
-              topTile.style.boxShadow = '#005780 0px 22px 70px 4px';
-
-              selectedTile.classList.remove('shake');
-              topTile.classList.remove('shake');
-
+              pairsArray.forEach(eachTile => {
+                eachTile.style.backgroundColor = '#67cdfc';
+                eachTile.style.boxShadow = '#005780 0px 22px 70px 4px';
+                eachTile.classList.remove('shake');
+              });
             }, 500);
+
           },1000);
 
 
