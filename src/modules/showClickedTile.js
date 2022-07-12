@@ -9,8 +9,10 @@ const showClickedTile = selectedTile =>{
     // Display the image and then animate. The showing of image first matters on a live website where the loading of image has a slight delay
     selectedTile.style.backgroundImage = backgroundImage;
     selectedTile.style.backgroundSize = 'contain';
+    setTimeout(()=>{
+        selectedTile.style.transition= 'all 0.6s ease';
+        selectedTile.style.transform = 'rotateY(360deg)';
+    },0)
 
-    selectedTile.style.transition= 'all 0.6s ease';
-    selectedTile.style.transform = 'rotateY(360deg)';
 }
 export default showClickedTile;
