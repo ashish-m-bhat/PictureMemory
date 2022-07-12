@@ -5,8 +5,11 @@ import { tilesArray } from "./variables.js";
 
 const showClickedTile = selectedTile =>{
     const backgroundImage = (tilesArray.filter(eachTile => eachTile.id === selectedTile.id))[0].image;
+
+    // Display the image and then animate. The showing of image first matters on a live website where the loading of image has a slight delay
     selectedTile.style.backgroundImage = backgroundImage;
     selectedTile.style.backgroundSize = 'contain';
+
     selectedTile.style.transition= 'all 0.6s ease';
     selectedTile.style.transform = 'rotateY(360deg)';
 }
