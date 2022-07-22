@@ -13,6 +13,12 @@ const createDivs = tilesArray =>{
                         opacity:0.1;
                         box-shadow: #005780 0px 22px 70px 4px;
                         border-radius:10%`;
+
+      // For Mobile devices
+      if(window.innerHeight > window.innerWidth){
+        innerDiv.style.height = '15%';
+        innerDiv.style.width = '26%';
+      }
       wrapperDiv.append(innerDiv);
     }
   }
