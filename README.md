@@ -1,5 +1,5 @@
-                                                   Memo Brain
-- Memo Brain is a game where you need to remember a tile and get the matching tile. 
+                                                   PictureMemory
+- PictureMemory is a game where you need to remember a tile and get the matching tile. 
 - The aim is to match each randomly placed tile with it's pair with lowest number of attempts.
 
                                                   Home page
