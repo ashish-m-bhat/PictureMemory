@@ -16,8 +16,9 @@ const createDivs = tilesArray =>{
 
       // For Mobile devices
       if(window.innerHeight > window.innerWidth){
-        innerDiv.style.height = '15%';
-        innerDiv.style.width = '26%';
+        innerDiv.style.height = '20%';
+        innerDiv.style.width = '27%';
+        innerDiv.style.marginLeft = '2%';
       }
       wrapperDiv.append(innerDiv);
     }
